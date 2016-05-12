@@ -1,0 +1,37 @@
+spin -a -f !([]mutex) -f !([]<>nostarve) -run -a ticket.pml
+warning: for p.o. reduction to be valid the never claim must be stutter-invariant
+(never claims generated from LTL formulae are stutter-invariant)
+
+(Spin Version 6.4.5 -- 1 January 2016)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (never_0)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 64 byte, depth reached 58, errors: 0
+      366 states, stored (538 visited)
+      706 states, matched
+     1244 transitions (= visited+matched)
+       22 atomic steps
+hash conflicts:         0 (resolved)
+
+Stats on memory usage (in Megabytes):
+    0.032	equivalent memory usage for states (stored*(State-vector + overhead))
+    0.289	actual memory usage for states
+  128.000	memory used for hash table (-w24)
+    0.534	memory used for DFS stack (-m10000)
+  128.730	total actual memory usage
+
+
+unreached in proctype ticket_lock
+	(0 of 9 states)
+unreached in init
+	(0 of 14 states)
+unreached in claim never_0
+	ticket.pml.nvr:12, state 13, "-end-"
+	(1 of 13 states)
+
+pan: elapsed time 0 seconds
